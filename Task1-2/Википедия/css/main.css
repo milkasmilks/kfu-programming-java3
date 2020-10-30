@@ -1,0 +1,189 @@
+body {
+	margin: 0;
+}
+
+header, footer {
+	background: #71AABF;
+	padding: 10px 20px;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.navigation {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.menu li{
+	display: inline-block;
+	padding: 0.5px;
+	margin: 1px;
+}
+
+.menu ul{
+	margin: 5px;
+	list-style: none;
+}
+
+.search {
+	align-self: flex-end;
+	margin-right: 20px;
+}
+
+div {
+	display: flex;
+	flex-direction: row;
+}
+
+aside {
+	background: #F0F8FF;
+	padding-left: 10px;
+	width: 13%;
+	border-right: 1px solid #63838F;
+}
+
+aside ul, h4 {
+	padding-left: 5px;
+}
+
+aside li {
+	margin-bottom: 10px;
+}
+
+main {
+	margin-left: 12px;
+	width: 98%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.description {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+
+.intro, .info {
+	width: 73%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.intro h2 {
+	width: 100%;
+	border-bottom: 1px solid #63838F;
+	padding-bottom: 5px;
+}
+
+.info {
+	background: #F0F8FF;
+	width: 300px;
+	padding: 10px;
+	margin: 10px;
+	outline: 1px solid #63838F;
+}
+
+.info table td, th {
+	width: 30%;
+	font-size: 15px;
+	text-align: left;
+}
+
+.contents {
+	background: #F0F8FF;
+	width: 200px;
+	outline: 1px solid #63838F;
+	margin: 10px;
+	margin-top: 20px;
+
+}
+
+.contents ol, li, a {
+	text-align: left;
+	margin-bottom: 5px;
+	text-decoration: none;
+	padding-right: 20px;
+}
+
+.contents h3 {
+	text-align: center;
+	margin-bottom: -5px;
+}
+
+.article, .contents {
+	display: flex;
+	flex-direction: column;
+}
+
+
+.article h3 {
+	margin-top: -5px;
+	margin-bottom: -5px;
+	border-bottom: 1px solid #63838F;
+	padding-bottom: 5px;
+}
+
+.article p, ul {
+	margin-bottom: 25px;
+}
+
+aside ul {
+	list-style: none;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+}
+
+a{
+	color: #25647C;
+}
+
+/*При разрешении, ширина которого не превышает 800px, боковая панель навигации перемещается наверх*/
+@media screen and (max-width: 800px) {
+	aside {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	div {
+		flex-direction: column;
+	}
+}
+
+/*При разрешении, ширина которого не превышает 580px, боковая панель навигации исчезает*/
+@media screen and (max-width: 580px) {
+	aside {
+		display: none;
+	}
+
+	.description {
+		flex-direction: column;
+	}
+
+	.contents {
+		display: none;
+	}
+
+	.intro{
+		width: 98%;
+	}
+
+	.info {
+		margin: 15px auto;
+	}
+}

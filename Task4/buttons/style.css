@@ -1,0 +1,10 @@
+.btn-group{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin: 100px auto;
+	width: 50%;
+}
+
+
+	

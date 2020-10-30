@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Eyes</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="eye">
+			<div class="pupil">
+			</div>
+		</div>
+		<div class="eye">
+			<div class="pupil">
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var pupils = document.getElementsByClassName("pupil");
+		//При движении мыши вызывается функция:
+		document.onmousemove = function() {
+			//В процентах высчитывается значение смещения зрачка глаз, исходя из значений координат курсора event.clienX и event.clientY
+			var x = event.clientX * 100 / window.innerWidth + "%";
+			var y = event.clientY * 100 / window.innerHeight + "%";
+
+			//Меняется значение отступа зрачков от левой границы окна браузера
+			for (var i = 0; i < 2; i++) {
+				pupils[i].style.left = x;
+				pupils[i].style.top = y;
+			}
+
+		}
+
+	</script>
+
+</body>
+</html>
